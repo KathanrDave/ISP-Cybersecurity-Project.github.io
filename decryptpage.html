@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decrypt file</title>
+    <link rel="stylesheet" href="encryptcss.css" />
+  </head>
+  <body>
+    <a class="back"><img src="images/icons.svg" alt="back" /></a>
+    <section id="stage">
+      <section id="step1">
+        <section class="common if-decrypt">
+          <a class="button browse fill">Browse a file</a>
+          <input type="file" id="input-decrypt" />
+        </section>
+      </section>
+      <section id="step2">
+        <section class="common if-decrypt">
+          <div id="near-pass">Enter key here</div>
+
+          <input type="password" />
+          <a class="button process">Decrypt!</a>
+          <div id="note-pass">
+            Enter the pass phrase that was used to encrypt this file. It is not
+            possible to decrypt it without it.
+          </div>
+        </section>
+      </section>
+      <section id="step3">
+        <section class="common download">
+          <h2 id="dowload-ready">Your file is ready!</h2>
+          <a class="button download">Download</a>
+        </section>
+      </section>
+    </section>
+  </body>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="aes.js"></script>
+  <script src="decrypt.js"></script>
+</html>

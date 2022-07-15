@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  overflow: hidden;
+}
+
+a,
+a:visited {
+  outline: none;
+  color: #389dc1;
+}
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  font: 15px/1.3 "Raleway", sans-serif;
+  color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+#stage {
+  width: 100%;
+  height: 100%;
+  margin-top: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top 0.4s;
+}
+
+#stage > section {
+  /* The step divs */
+  height: 100%;
+  position: relative;
+}
+
+.common {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  top: 50%;
+  width: 100%;
+}
+.common input[type="file"] {
+  display: none;
+}
+a.back {
+  background: no-repeat -192px 0;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  top: 50px;
+  left: 50%;
+  z-index: 10;
+  opacity: 0.8;
+  margin-left: -16px;
+  display: none;
+}
+
+a.back:hover {
+  opacity: 1;
+}
+[class*="if-"] {
+  display: none;
+}
+
+body .if-encrypt {
+  display: block;
+}
+
+body .if-decrypt {
+  display: block;
+}
+.button {
+  width: 240px;
+  height: 70px;
+  text-align: center;
+  text-decoration: none !important;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  border-radius: 10px;
+  display: block;
+  line-height: 70px;
+  /* box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.08); */
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  font-size: 18px;
+  margin: 10px auto;
+  opacity: 0.9;
+  box-sizing: border-box;
+  -webkit-transition: 0.08s ease-in;
+}
+.fill:hover:before {
+  bottom: 0;
+  color: black;
+}
+
+.fill:hover {
+  color: whitesmoke;
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: orange;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  z-index: -1;
+  -webkit-transition: bottom 0.3s ease-in;
+}
+
+.button.browse {
+  width: 180px;
+  border: 4px solid rebeccapurple;
+  color: rebeccapurple;
+}
+
+.button.process {
+  width: 190px;
+  background-color: rebeccapurple;
+}
+
+.button.download {
+  width: 216px;
+  background-color: rebeccapurple;
+}
+
+.button.browse::before {
+  background-position: -240px 0;
+}
+
+.button.process::before {
+  background-position: -142px 0;
+}
+
+.button.download:before {
+  background-position: -48px 0;
+}
+
+#step1 {
+  background-color: #62e2ff;
+}
+
+body #step2 {
+  background-color: #9ad58c;
+}
+
+body #step2 {
+  background-color: #5abbf7;
+}
+
+#step3 {
+  background-color: #f78e38fd;
+}
+#step3 input[type="password"] {
+  background-color: #fff;
+  border: none;
+  padding: 8px 18px;
+  line-height: 1;
+  font: inherit;
+  display: inline-block;
+  outline: none;
+  width: 400px;
+  margin-bottom: 18px;
+  border-radius: 2px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.05);
+  font-size: 36px;
+  color: #555;
+}
+
+#step1 .common {
+  margin-top: -110px;
+}
+#step2 .common {
+  margin-top: -157px;
+}
+#step3 .common {
+  margin-top: -100px;
+}
+
+#near-pass {
+  color: black;
+  font-weight: 600;
+  background-color: rgb(236, 79, 79);
+  font-size: 30px;
+  /* top : 30%; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 8px 18px;
+  display: inline-block;
+  
+}
+
+#step2 input[type="password"] {
+  background-color: #fff;
+  border: 1px dotted black;
+  padding: 8px 18px;
+  line-height: 1;
+  font: inherit;
+  outline: none;
+  width: 400px;
+  margin-bottom: 100px;
+  /* margin: 18px 34.3%; */
+  border-radius: 2px;
+  box-shadow: 3px 3px 0 rgba(14, 0, 0, 0.05);
+  font-size: 36px;
+  color: #555;
+  margin: 0;
+}
+#note-pass {
+  color: black;
+  font-weight: bold;
+
+  background-color: rgb(243, 146, 146);
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  text-overflow: none;
+
+  /* width: 33.3%; */
+
+  margin: 0px 33.3%;
+  border: 3px #555 solid;
+}
+#dowload-ready{
+  color: black;
+  font-weight: 600;
+  background-color: rgb(58, 201, 252);
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 8px 18px;
+  display: inline-block;
+}

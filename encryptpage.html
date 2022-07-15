@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encrypt file</title>
+    <link rel="stylesheet" href="encryptcss.css" />
+  </head>
+  <body>
+    <a class="back"><img src="images/icons.svg" alt="back" /></a>
+    <section id="stage">
+      <section id="step1">
+        <section class="common if-encrypt">
+          <a class="button browse fill">Browse a file </a>
+          <input type="file" id="input-encrypt" />
+        </section>
+      </section>
+      <section id="step2">
+        <section class="common if-encrypt">
+          <div id="near-pass">Enter a key here</div>
+
+          <input type="password" />
+          <a class="button process">Encrypt!</a>
+          <div id="note-pass">
+            This phrase will be used as an encryption key. Write it down or
+            remember it; you won't be able to restore the file without it.
+          </div>
+        </section>
+      </section>
+      <section id="step3">
+        <section class="common download">
+          <h2 id="dowload-ready">Your file is ready!</h2>
+          <a class="button download">Download</a>
+        </section>
+      </section>
+    </section>
+  </body>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="aes.js"></script>
+  <script src="encrypt.js"></script>
+</html>
