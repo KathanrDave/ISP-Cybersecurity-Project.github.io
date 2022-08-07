@@ -34,7 +34,7 @@ $(function () {
 
     reader.onload = function (e) {
       var encrypted = CryptoJS.AES.encrypt(e.target.result, password);
-
+      
       a.attr("href", "data:application/octet-stream," + encrypted);
       a.attr("download", file.name + ".encrypted");
 
